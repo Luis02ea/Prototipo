@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MergerComm — Enterprise Merger Intelligence</title>
+<link rel="stylesheet" href="inde.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="logo-wrap">
+    <div class="logo-mark">
+      <div class="logo-icon-box">🔄</div>
+      <div>
+        <div class="logo-text">MergerComm</div>
+        <div class="logo-sub">Intelligence Platform</div>
+      </div>
+    </div>
+  </div>
+  <nav>
+    <div class="nav-section-label">Gestión</div>
+    <a class="nav-item active" data-page="dashboard"><span class="nav-icon">▦</span>Dashboard</a>
+    <a class="nav-item" data-page="templates"><span class="nav-icon">📄</span>Plantillas</a>
+    <a class="nav-item" data-page="surveys"><span class="nav-icon">📋</span>Encuestas</a>
+    <a class="nav-item" data-page="workshops"><span class="nav-icon">🎓</span>Talleres</a>
+    <div class="nav-section-label">Inteligencia</div>
+    <a class="nav-item" data-page="metrics"><span class="nav-icon">📈</span>Métricas</a>
+    <a class="nav-item" data-page="chatbot"><span class="nav-icon">✦</span>Asistente IA<span class="nav-badge">IA</span></a>
+    <div class="nav-section-label">Riesgo</div>
+    <a class="nav-item" data-page="crisis"><span class="nav-icon">🚨</span>Centro de Crisis<span class="nav-alert"></span></a>
+  </nav>
+  <div class="sidebar-footer">
+    <div class="phase-badge">
+      <div class="phase-label">Progreso de Fusión</div>
+      <div class="phase-value">Fase 2 · Transición</div>
+      <div class="phase-bar"><div class="phase-fill"></div></div>
+      <div class="phase-weeks">Semana 4 de 12 · 40% completado</div>
+    </div>
+  </div>
+</aside>
+
+<main class="main">
+  <header class="topbar">
+    <div class="topbar-title">
+      <h1 id="pageTitle">Dashboard</h1>
+      <p id="pageSubtitle">Vista general del proceso de fusión</p>
+    </div>
+    <div class="topbar-spacer"></div>
+    <div class="topbar-search">🔍 Buscar…</div>
+    <button class="topbar-btn" title="Notificaciones" style="position:relative;">🔔<span class="notif-dot"></span></button>
+    <button class="topbar-btn" title="Configuración">⚙️</button>
+    <div class="topbar-avatar">JP</div>
+  </header>
+
+  <div class="content-area">
+
+    <div class="page active" id="page-dashboard">
+
+      <div class="welcome-banner">
+        <div>
+          <div class="wb-greeting">Buenos días, viernes 28 de febrero · 09:14 AM</div>
+          <div class="wb-name">Luis Enrique</div>
+          <div class="wb-sub">Director de Comunicación Organizacional · MergerComm</div>
+        </div>
+        <div class="wb-pills">
+          <div class="wb-pill green">
+            <div class="wb-pill-ico">📅</div>
+            <div><div class="wb-pill-val">Sem 4</div><div class="wb-pill-lbl">de 12 totales</div></div>
+          </div>
+          <div class="wb-pill blue">
+            <div class="wb-pill-ico">🔄</div>
+            <div><div class="wb-pill-val">Fase 2</div><div class="wb-pill-lbl">Transición</div></div>
+          </div>
+          <div class="wb-pill amber">
+            <div class="wb-pill-ico">⚡</div>
+            <div><div class="wb-pill-val">3</div><div class="wb-pill-lbl">Tareas urgentes</div></div>
+          </div>
+        </div>
+        <div class="wb-next">
+          <div class="wb-next-label">Próximo hito</div>
+          <div class="wb-next-date">5 Feb</div>
+          <div class="wb-next-event">Taller Empático · Grupo 2</div>
+        </div>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi-card" data-tooltip="12% más que la semana pasada">
+          <div class="kpi-header"><span class="kpi-icon">📢</span><span class="kpi-trend up">↑ +12%</span></div>
+          <div class="kpi-ring-row">
+            <div>
+              <div class="kpi-value">24</div>
+              <div class="kpi-label">Comunicados enviados</div>
+            </div>
+            <svg class="kpi-ring ring-svg" viewBox="0 0 36 36">
+              <circle class="ring-bg" cx="18" cy="18" r="15.9"/>
+              <circle class="ring-fill" cx="18" cy="18" r="15.9" stroke="#6097ff" stroke-dasharray="72 28" stroke-dashoffset="0"/>
+            </svg>
+          </div>
+        </div>
+        <div class="kpi-card" data-tooltip="87% de los 1,250 empleados alcanzados">
+          <div class="kpi-header"><span class="kpi-icon">👥</span><span class="kpi-trend up">↑ +5%</span></div>
+          <div class="kpi-ring-row">
+            <div>
+              <div class="kpi-value">87%</div>
+              <div class="kpi-label">Alcance de empleados</div>
+            </div>
+            <svg class="kpi-ring ring-svg" viewBox="0 0 36 36">
+              <circle class="ring-bg" cx="18" cy="18" r="15.9"/>
+              <circle class="ring-fill" cx="18" cy="18" r="15.9" stroke="#1de9b6" stroke-dasharray="87 13" stroke-dashoffset="0"/>
+            </svg>
+          </div>
+        </div>
+        <div class="kpi-card" data-tooltip="23% más preguntas respondidas vs semana anterior">
+          <div class="kpi-header"><span class="kpi-icon">💬</span><span class="kpi-trend up">↑ +23%</span></div>
+          <div class="kpi-ring-row">
+            <div>
+              <div class="kpi-value">156</div>
+              <div class="kpi-label">Preguntas respondidas</div>
+            </div>
+            <svg class="kpi-ring ring-svg" viewBox="0 0 36 36">
+              <circle class="ring-bg" cx="18" cy="18" r="15.9"/>
+              <circle class="ring-fill" cx="18" cy="18" r="15.9" stroke="#ffb020" stroke-dasharray="78 22" stroke-dashoffset="0"/>
+            </svg>
+          </div>
+        </div>
+        <div class="kpi-card" data-tooltip="4.2/5 — Por encima de la meta de 4.0">
+          <div class="kpi-header"><span class="kpi-icon">⭐</span><span class="kpi-trend up">↑ +0.3</span></div>
+          <div class="kpi-ring-row">
+            <div>
+              <div class="kpi-value">4.2</div>
+              <div class="kpi-label">Satisfacción promedio</div>
+            </div>
+            <svg class="kpi-ring ring-svg" viewBox="0 0 36 36">
+              <circle class="ring-bg" cx="18" cy="18" r="15.9"/>
+              <circle class="ring-fill" cx="18" cy="18" r="15.9" stroke="#b197fc" stroke-dasharray="84 16" stroke-dashoffset="0"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="dash-grid">
+        <div class="card">
+          <div class="card-title"><span class="dot"></span>Timeline de Fusión<span class="card-action">Ver completo →</span></div>
+          <div class="timeline">
+            <div class="tl-item done"><div class="tl-dot"></div><span class="tl-date">Ene 15</span><span class="tl-text">Diagnóstico cultural completado</span></div>
+            <div class="tl-item done"><div class="tl-dot"></div><span class="tl-date">Ene 20</span><span class="tl-text">Capacitación de líderes</span></div>
+            <div class="tl-item active-tl"><div class="tl-dot"></div><span class="tl-date">Ene 30</span><span class="tl-text">🔵 Anuncio oficial en curso</span></div>
+            <div class="tl-item"><div class="tl-dot"></div><span class="tl-date">Feb 15</span><span class="tl-text">Sesiones departamentales</span></div>
+            <div class="tl-item"><div class="tl-dot"></div><span class="tl-date">Mar 01</span><span class="tl-text">Primera encuesta de pulso</span></div>
+          </div>
+        </div>
+
+        <div class="card span2">
+          <div class="card-title"><span class="dot"></span>Sentimiento de Empleados<span class="card-action" onclick="navigate('chatbot');sendSuggestion('evolucion_sentimiento')">Ver histórico →</span></div>
+          <div style="height:150px;"><canvas id="dashSentimentChart"></canvas></div>
+          <div style="margin-top:14px;" class="sent-bars">
+            <div class="sent-row"><span class="sent-label" data-tooltip="62% vs 54% semana anterior">Positivo</span><div class="sent-track"><div class="sent-fill pos" style="width:62%"></div></div><span class="sent-pct">62%</span></div>
+            <div class="sent-row"><span class="sent-label" data-tooltip="Segmento en espera de más información">Neutral</span><div class="sent-track"><div class="sent-fill neu" style="width:28%"></div></div><span class="sent-pct">28%</span></div>
+            <div class="sent-row"><span class="sent-label" data-tooltip="Concentrado en Operaciones y Logística">Negativo</span><div class="sent-track"><div class="sent-fill neg" style="width:10%"></div></div><span class="sent-pct">10%</span></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><span class="dot"></span>Tareas Pendientes<span style="margin-left:auto;font-size:10px;color:var(--red);font-weight:700;">3 urgentes</span></div>
+          <ul class="task-list">
+            <li class="task-item" onclick="toggleTask(this)"><div class="task-check"></div><span class="task-txt">Revisar comunicado de anuncio</span><span class="task-chip urgent">Urgente</span></li>
+            <li class="task-item" onclick="toggleTask(this)"><div class="task-check"></div><span class="task-txt">Confirmar asistencia Town Hall</span><span class="task-chip medium">Hoy</span></li>
+            <li class="task-item" onclick="toggleTask(this)"><div class="task-check"></div><span class="task-txt">Actualizar FAQs portal</span><span class="task-chip medium">Mañana</span></li>
+            <li class="task-item done" onclick="toggleTask(this)"><div class="task-check">✓</div><span class="task-txt">Preparar materiales taller</span><span class="task-chip low">Semana</span></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><span class="dot"></span>Actividad Reciente</div>
+          <ul class="act-list">
+            <li class="act-item">
+              <div class="act-avatar a1">MG</div>
+              <div class="act-body"><div class="act-txt">Comunicado enviado a <strong>Marketing</strong> — 87 destinatarios</div><div class="act-who">María García · Dir. Comunicación</div></div>
+              <div class="act-time-chip">2h</div>
+            </li>
+            <li class="act-item">
+              <div class="act-avatar a2">RL</div>
+              <div class="act-body"><div class="act-txt"><strong>45 nuevas respuestas</strong> en encuesta de pulso semanal</div><div class="act-who">Sistema automático</div></div>
+              <div class="act-time-chip">4h</div>
+            </li>
+            <li class="act-item">
+              <div class="act-avatar a3">JP</div>
+              <div class="act-body"><div class="act-txt">Taller completado ⭐ 4.8 — <strong>Comunicación Empática G1</strong></div><div class="act-who">Juan Pablo R. · Facilitador</div></div>
+              <div class="act-time-chip">Ayer</div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-title"><span class="dot"></span>Alcance Semanal por Día</div>
+          <div style="height:130px;"><canvas id="dashEngagementChart"></canvas></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="page" id="page-templates">
+      <div class="pg-header">
+        <div><h2>Plantillas de Comunicación</h2><div class="pg-header-sub">6 plantillas disponibles · Última actualización: hace 2 días</div></div>
+        <button class="btn btn-primary">+ Nueva Plantilla</button>
+      </div>
+      <div class="tmpl-grid">
+        <div class="tmpl-card">
+          <div class="tmpl-ico-wrap">📢</div>
+          <div class="tmpl-name">Anuncio Oficial</div>
+          <div class="tmpl-desc">Comunicado principal para anunciar la fusión a todos los colaboradores. Incluye puntos clave, tono empático y cierre con call-to-action.</div>
+          <div class="tmpl-meta"><span class="tmpl-tag">Todo el personal</span><span class="tmpl-tag">Email</span></div>
+          <div class="tmpl-actions"><button class="btn btn-ghost btn-sm">Vista previa</button><button class="btn btn-primary btn-sm">Usar plantilla</button></div>
+        </div>
+        <div class="tmpl-card">
+          <div class="tmpl-ico-wrap">👥</div>
+          <div class="tmpl-name">Sesión Departamental</div>
+          <div class="tmpl-desc">Guión estructurado para reuniones Q&A por área. Incluye apertura, agenda, banco de respuestas y protocolo de cierre.</div>
+          <div class="tmpl-meta"><span class="tmpl-tag">Líderes de área</span><span class="tmpl-tag">Presencial</span></div>
+          <div class="tmpl-actions"><button class="btn btn-ghost btn-sm">Vista previa</button><button class="btn btn-primary btn-sm">Usar plantilla</button></div>
+        </div>
+        <div class="tmpl-card">
+          <div class="tmpl-ico-wrap">🔒</div>
+          <div class="tmpl-name">Preparación Líderes</div>
+          <div class="tmpl-desc">Mensaje confidencial para preparar a directivos antes del anuncio público. Incluye puntos sensibles y manejo de objeciones.</div>
+          <div class="tmpl-meta"><span class="tmpl-tag">Directivos</span><span class="tmpl-tag">Confidencial</span></div>
+          <div class="tmpl-actions"><button class="btn btn-ghost btn-sm">Vista previa</button><button class="btn btn-primary btn-sm">Usar plantilla</button></div>
+        </div>
+        <div class="tmpl-card">
+          <div class="tmpl-ico-wrap">❓</div>
+          <div class="tmpl-name">FAQs Colaboradores</div>
+          <div class="tmpl-desc">Banco de 42 respuestas a preguntas frecuentes. Cubre empleo, beneficios, cultura, sistemas y estructura organizacional.</div>
+          <div class="tmpl-meta"><span class="tmpl-tag">Todo el personal</span><span class="tmpl-tag">42 preguntas</span></div>
+          <div class="tmpl-actions"><button class="btn btn-ghost btn-sm">Vista previa</button><button class="btn btn-primary btn-sm">Usar plantilla</button></div>
+        </div>
+        <div class="tmpl-card">
+          <div class="tmpl-ico-wrap">💼</div>
+          <div class="tmpl-name">Conversación 1:1</div>
+          <div class="tmpl-desc">Guía para conversaciones individuales con talento clave. Incluye preguntas abiertas, escucha activa y seguimiento de compromisos.</div>
+          <div class="tmpl-meta"><span class="tmpl-tag">Gerentes</span><span class="tmpl-tag">Talento clave</span></div>
+          <div class="tmpl-actions"><button class="btn btn-ghost btn-sm">Vista previa</button><button class="btn btn-primary btn-sm">Usar plantilla</button></div>
+        </div>
+        <div class="tmpl-card">
+          <div class="tmpl-ico-wrap">🤝</div>
+          <div class="tmpl-name">Stakeholders Externos</div>
+          <div class="tmpl-desc">Comunicados para clientes, proveedores y socios. Adaptable por segmento con variantes formal e informal.</div>
+          <div class="tmpl-meta"><span class="tmpl-tag">Externo</span><span class="tmpl-tag">3 variantes</span></div>
+          <div class="tmpl-actions"><button class="btn btn-ghost btn-sm">Vista previa</button><button class="btn btn-primary btn-sm">Usar plantilla</button></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page" id="page-surveys">
+      <div class="pg-header">
+        <div><h2>Encuestas y Diagnóstico</h2><div class="pg-header-sub">1 encuesta activa · 744 respuestas totales esta semana</div></div>
+        <button class="btn btn-primary">+ Nueva Encuesta</button>
+      </div>
+      <div class="survey-list">
+        <div class="surv-card active-surv">
+          <div class="surv-status-wrap"><div class="surv-status-dot active"></div><div class="surv-status-label">Activa</div></div>
+          <div class="surv-info"><div class="surv-name">Encuesta de Pulso Semanal — Semana 4</div><div class="surv-desc">Evaluación rápida de 8 preguntas · Cierra el domingo 02 Feb · Confidencial</div></div>
+          <div class="surv-stats">
+            <div class="surv-stat"><div class="surv-stat-val">145</div><div class="surv-stat-lbl">Respuestas</div></div>
+            <div class="surv-stat"><div class="surv-stat-val" style="color:var(--green)">78%</div><div class="surv-stat-lbl">Participación</div></div>
+          </div>
+          <div style="display:flex;gap:8px;"><button class="btn btn-primary btn-sm">Ver resultados</button><button class="btn btn-ghost btn-sm">Cerrar encuesta</button></div>
+        </div>
+        <div class="surv-card">
+          <div class="surv-status-wrap"><div class="surv-status-dot done"></div><div class="surv-status-label">Cerrada</div></div>
+          <div class="surv-info"><div class="surv-name">Diagnóstico Cultural — Empresa A</div><div class="surv-desc">25 preguntas · 5 dimensiones culturales · Completada 15 Ene · Reporte disponible</div></div>
+          <div class="surv-stats">
+            <div class="surv-stat"><div class="surv-stat-val">312</div><div class="surv-stat-lbl">Respuestas</div></div>
+            <div class="surv-stat"><div class="surv-stat-val" style="color:var(--green)">92%</div><div class="surv-stat-lbl">Participación</div></div>
+          </div>
+          <button class="btn btn-ghost btn-sm">Ver reporte</button>
+        </div>
+        <div class="surv-card">
+          <div class="surv-status-wrap"><div class="surv-status-dot done"></div><div class="surv-status-label">Cerrada</div></div>
+          <div class="surv-info"><div class="surv-name">Diagnóstico Cultural — Empresa B</div><div class="surv-desc">25 preguntas · 5 dimensiones culturales · Completada 15 Ene · Reporte disponible</div></div>
+          <div class="surv-stats">
+            <div class="surv-stat"><div class="surv-stat-val">287</div><div class="surv-stat-lbl">Respuestas</div></div>
+            <div class="surv-stat"><div class="surv-stat-val" style="color:var(--green)">89%</div><div class="surv-stat-lbl">Participación</div></div>
+          </div>
+          <button class="btn btn-ghost btn-sm">Ver reporte</button>
+        </div>
+        <div class="surv-card" style="border-style:dashed;justify-content:center;flex-direction:column;align-items:center;padding:32px;">
+          <div class="empty-ico" style="font-size:28px;margin-bottom:8px;opacity:0.3;">📋</div>
+          <div style="font-size:13px;color:var(--text3);margin-bottom:10px;">Próxima encuesta programada</div>
+          <button class="btn btn-ghost btn-sm">+ Crear encuesta de Fase 3</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="page" id="page-workshops">
+      <div class="pg-header">
+        <div><h2>Gestión de Talleres</h2><div class="pg-header-sub">2 próximos · 1 completado · 58 participantes acumulados</div></div>
+        <button class="btn btn-primary">+ Programar Taller</button>
+      </div>
+      <div class="wk-list">
+        <div class="wk-card upcoming">
+          <div class="wk-date-box"><div class="wk-day">05</div><div class="wk-month">FEB</div></div>
+          <div class="wk-info">
+            <div class="wk-name">Comunicación Empática — Grupo 2</div>
+            <div class="wk-meta">
+              <span>📍 Sala Conferencias A</span>
+              <span>🕐 09:00–13:00</span>
+              <span>👥 18 confirmados / 20 objetivo</span>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px;">
+            <span class="wk-badge upcoming">Próximo · 6 días</span>
+            <button class="btn btn-ghost btn-sm" style="font-size:11px;">Ver lista asistentes</button>
+          </div>
+        </div>
+        <div class="wk-card upcoming">
+          <div class="wk-date-box"><div class="wk-day">12</div><div class="wk-month">FEB</div></div>
+          <div class="wk-info">
+            <div class="wk-name">Embajadores del Cambio</div>
+            <div class="wk-meta">
+              <span>📍 Auditorio Principal</span>
+              <span>🕐 09:00–16:00</span>
+              <span>👥 24 confirmados / 25 objetivo</span>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px;">
+            <span class="wk-badge upcoming">Próximo · 13 días</span>
+            <button class="btn btn-ghost btn-sm" style="font-size:11px;">Ver lista asistentes</button>
+          </div>
+        </div>
+        <div class="wk-card" style="opacity:0.75;">
+          <div class="wk-date-box"><div class="wk-day" style="color:var(--text3)">28</div><div class="wk-month">ENE</div></div>
+          <div class="wk-info">
+            <div class="wk-name">Comunicación Empática — Grupo 1</div>
+            <div class="wk-meta">
+              <span>📍 Sala Conferencias A</span>
+              <span>🕐 09:00–13:00</span>
+              <span>👥 16 asistentes</span>
+              <div class="wk-rating">⭐ 4.8 / 5</div>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px;">
+            <span class="wk-badge done">Completado</span>
+            <button class="btn btn-ghost btn-sm" style="font-size:11px;">Ver evaluación</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page" id="page-crisis">
+      <div class="pg-header">
+        <div><h2>Centro de Crisis</h2><div class="pg-header-sub">Monitoreo 24/7 activo · Última actualización: hace 18 min</div></div>
+        <button class="btn btn-danger">🚨 Activar Protocolo</button>
+      </div>
+      <div class="crisis-wrap">
+        <div class="crisis-status">
+          <div class="crisis-pulse"></div>
+          <div>
+            <div class="crisis-status-text">Sin incidentes activos</div>
+            <div class="crisis-status-sub">Sistema en monitoreo normal · Todos los canales operativos</div>
+          </div>
+        </div>
+        <div class="crisis-levels">
+          <div class="crisis-level">
+            <h4 style="color:var(--green)">🟢 Nivel 1 — Incidente Menor</h4>
+            <p>Impacto limitado a un equipo o área. No requiere escalamiento inmediato. El equipo de comunicación puede manejarlo.</p>
+            <div class="crisis-resp">⏱ Respuesta: 24–48 horas</div>
+          </div>
+          <div class="crisis-level">
+            <h4 style="color:var(--amber)">🟡 Nivel 2 — Situación Seria</h4>
+            <p>Riesgo de escalamiento. Puede afectar múltiples departamentos o stakeholders. Requiere validación de directivos.</p>
+            <div class="crisis-resp">⏱ Respuesta: 4–8 horas</div>
+          </div>
+          <div class="crisis-level">
+            <h4 style="color:var(--red)">🔴 Nivel 3 — Crisis Mayor</h4>
+            <p>Impacto organizacional amplio. Riesgo reputacional o legal. Requiere activación inmediata del comité de crisis.</p>
+            <div class="crisis-resp">⏱ Respuesta: 30–60 minutos</div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-title"><span class="dot"></span>Contactos de Emergencia</div>
+          <div class="crisis-contacts">
+            <div class="contact-row">
+              <div class="contact-av c1">CE</div>
+              <div><div class="contact-role">Líder de Crisis</div><div class="contact-name">Carlos Estrada · CEO</div></div>
+              <div class="contact-ext">Ext. 1001</div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-av c2">MG</div>
+              <div><div class="contact-role">Comunicación & RRHH</div><div class="contact-name">María García · Dir. RRHH</div></div>
+              <div class="contact-ext">Ext. 1002</div>
+            </div>
+            <div class="contact-row">
+              <div class="contact-av c3">RL</div>
+              <div><div class="contact-role">Área Legal</div><div class="contact-name">Roberto Luna · Asesor Jurídico</div></div>
+              <div class="contact-ext">Ext. 1003</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page" id="page-metrics">
+      <div class="pg-header">
+        <div><h2>Métricas y Reportes</h2><div class="pg-header-sub">Actualizado en tiempo real · Semana 4 de 12 · Todos los KPIs en verde</div></div>
+        <button class="btn btn-primary">📥 Exportar Reporte</button>
+      </div>
+      <div class="metrics-wrap">
+        <div class="metrics-top">
+          <div class="metric-kpi" data-tooltip="84% vs meta de 80%">
+            <div class="metric-kpi-label">Conocimiento de Cambios</div>
+            <div class="metric-kpi-value green">84%</div>
+            <div class="metric-track"><div class="metric-fill-bar" style="width:84%"></div></div>
+            <div class="metric-target">Meta: 80% <span class="check">✓ +4pts</span></div>
+          </div>
+          <div class="metric-kpi" data-tooltip="72% vs meta de 70%">
+            <div class="metric-kpi-label">Satisfacción Comunicación</div>
+            <div class="metric-kpi-value amber">72%</div>
+            <div class="metric-track"><div class="metric-fill-bar amber" style="width:72%"></div></div>
+            <div class="metric-target">Meta: 70% <span class="check">✓ +2pts</span></div>
+          </div>
+          <div class="metric-kpi" data-tooltip="eNPS: +32 vs meta de +30">
+            <div class="metric-kpi-label">eNPS Score</div>
+            <div class="metric-kpi-value blue">+32</div>
+            <div class="metric-track"><div class="metric-fill-bar blue" style="width:60%"></div></div>
+            <div class="metric-target">Meta: +30 <span class="check">✓ +2pts</span></div>
+          </div>
+          <div class="metric-kpi" data-tooltip="94% de 47 roles críticos retenidos">
+            <div class="metric-kpi-label">Retención Talento Clave</div>
+            <div class="metric-kpi-value green">94%</div>
+            <div class="metric-track"><div class="metric-fill-bar" style="width:94%"></div></div>
+            <div class="metric-target">Meta: 90% <span class="check">✓ +4pts</span></div>
+          </div>
+          <div class="metric-kpi" data-tooltip="78% de asistencia en sesiones">
+            <div class="metric-kpi-label">Participación en Sesiones</div>
+            <div class="metric-kpi-value green">78%</div>
+            <div class="metric-track"><div class="metric-fill-bar" style="width:78%"></div></div>
+            <div class="metric-target">Meta: 75% <span class="check">✓ +3pts</span></div>
+          </div>
+          <div class="metric-kpi" data-tooltip="65% de reducción vs línea base">
+            <div class="metric-kpi-label">Reducción de Rumores</div>
+            <div class="metric-kpi-value blue">−65%</div>
+            <div class="metric-track"><div class="metric-fill-bar blue" style="width:65%"></div></div>
+            <div class="metric-target">Meta: −60% <span class="check">✓ −5pts extra</span></div>
+          </div>
+        </div>
+        <div class="metrics-charts">
+          <div class="card chart-wrap"><div class="card-title"><span class="dot"></span>Evolución Sentimiento (8 semanas)</div><canvas id="metricsLineChart"></canvas></div>
+          <div class="card chart-wrap"><div class="card-title"><span class="dot"></span>Compatibilidad Cultural A vs B</div><canvas id="metricsRadarChart"></canvas></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page" id="page-chatbot">
+      <div class="chat-layout">
+        <div class="chat-sidebar">
+          <div class="chat-sidebar-header">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+              <div style="width:8px;height:8px;background:var(--green);border-radius:50%;box-shadow:0 0 6px var(--green);"></div>
+              <h3>Asistente IA</h3>
+            </div>
+            <p style="font-size:11px;color:var(--text3);line-height:1.4;">Análisis inteligente precargado · Sin conexión</p>
+          </div>
+          <div class="chat-suggestions">
+
+            <div class="chat-sug-group">
+              <div class="chat-sug-label">🌡 Sentimiento</div>
+              <div class="chat-sug-btn" data-tip="Dona" onclick="sendSuggestion('sentimiento_actual')">
+                <span class="sug-ico">😊</span><div class="sug-content"><div class="sug-title">Sentimiento actual</div><div class="sug-sub">Distribución positivo/neutro/negativo</div></div><span class="sug-chart-tag">Dona</span>
+              </div>
+              <div class="chat-sug-btn" data-tip="Línea" onclick="sendSuggestion('evolucion_sentimiento')">
+                <span class="sug-ico">📈</span><div class="sug-content"><div class="sug-title">Evolución 8 semanas</div><div class="sug-sub">Tendencia histórica del sentimiento</div></div><span class="sug-chart-tag">Línea</span>
+              </div>
+              <div class="chat-sug-btn" onclick="sendSuggestion('sentimiento_por_area')">
+                <span class="sug-ico">🏢</span><div class="sug-content"><div class="sug-title">Por departamento</div><div class="sug-sub">Comparativa entre áreas</div></div><span class="sug-chart-tag">Barras H</span>
+              </div>
+            </div>
+
+            <div class="chat-sug-group">
+              <div class="chat-sug-label">📣 Comunicación</div>
+              <div class="chat-sug-btn" onclick="sendSuggestion('alcance_comunicados')">
+                <span class="sug-ico">📢</span><div class="sug-content"><div class="sug-title">Alcance comunicados</div><div class="sug-sub">Cobertura por área</div></div><span class="sug-chart-tag">Barras</span>
+              </div>
+              <div class="chat-sug-btn" onclick="sendSuggestion('canales_comunicacion')">
+                <span class="sug-ico">📡</span><div class="sug-content"><div class="sug-title">Canales utilizados</div><div class="sug-sub">Email, Slack, Presencial, etc.</div></div><span class="sug-chart-tag">Polar</span>
+              </div>
+              <div class="chat-sug-btn" onclick="sendSuggestion('frecuencia_comunicados')">
+                <span class="sug-ico">📅</span><div class="sug-content"><div class="sug-title">Frecuencia mensual</div><div class="sug-sub">Comunicados enviados por semana</div></div><span class="sug-chart-tag">Área</span>
+              </div>
+            </div>
+
+            <div class="chat-sug-group">
+              <div class="chat-sug-label">🎓 Talleres</div>
+              <div class="chat-sug-btn" onclick="sendSuggestion('asistencia_talleres')">
+                <span class="sug-ico">👥</span><div class="sug-content"><div class="sug-title">Asistencia y metas</div><div class="sug-sub">Real vs objetivo por taller</div></div><span class="sug-chart-tag">Barras agrup.</span>
+              </div>
+              <div class="chat-sug-btn" onclick="sendSuggestion('satisfaccion_talleres')">
+                <span class="sug-ico">⭐</span><div class="sug-content"><div class="sug-title">Satisfacción talleres</div><div class="sug-sub">Puntuaciones por sesión</div></div><span class="sug-chart-tag">Burbuja</span>
+              </div>
+            </div>
+
+            <div class="chat-sug-group">
+              <div class="chat-sug-label">📊 Métricas & KPI</div>
+              <div class="chat-sug-btn" onclick="sendSuggestion('kpi_general')">
+                <span class="sug-ico">🏆</span><div class="sug-content"><div class="sug-title">KPIs vs metas</div><div class="sug-sub">Estado de todos los indicadores</div></div><span class="sug-chart-tag">Barras</span>
+              </div>
+              <div class="chat-sug-btn" onclick="sendSuggestion('diagnostico_cultural')">
+                <span class="sug-ico">🌐</span><div class="sug-content"><div class="sug-title">Diagnóstico cultural</div><div class="sug-sub">Brecha entre Empresa A y B</div></div><span class="sug-chart-tag">Radar</span>
+              </div>
+              <div class="chat-sug-btn" onclick="sendSuggestion('participacion_encuestas')">
+                <span class="sug-ico">📋</span><div class="sug-content"><div class="sug-title">Participación encuestas</div><div class="sug-sub">Tasa por departamento</div></div><span class="sug-chart-tag">Barras H</span>
+              </div>
+              <div class="chat-sug-btn" onclick="sendSuggestion('retencion_talento')">
+                <span class="sug-ico">💎</span><div class="sug-content"><div class="sug-title">Retención de talento</div><div class="sug-sub">Roles críticos y riesgo de fuga</div></div><span class="sug-chart-tag">Dona</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="chat-main">
+          <div class="chat-messages" id="chatMessages">
+            <div class="msg bot">
+              <div class="msg-avatar">✦</div>
+              <div>
+                <div class="msg-bubble">
+                  <strong>Hola, soy tu Asistente de Inteligencia MergerComm.</strong> 👋<br><br>
+                  Estoy precargado con todos los datos del proceso de fusión. Puedo:<br>
+                  <span style="color:var(--green)">✦</span> Mostrarte <strong>gráficas interactivas</strong> de cualquier métrica<br>
+                  <span style="color:var(--accent2)">✦</span> <strong>Explicar</strong> qué significan los datos y qué tan bien estamos<br>
+                  <span style="color:var(--amber)">✦</span> Darte <strong>alertas</strong> sobre áreas de riesgo<br>
+                  <span style="color:var(--purple)">✦</span> Sugerir <strong>acciones concretas</strong> basadas en los resultados<br><br>
+                  Selecciona una consulta del panel izquierdo o escribe tu pregunta. 🚀
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="chat-input-area">
+            <textarea class="chat-input-box" id="chatInput" rows="1" placeholder="Ej: ¿Cómo está el sentimiento? ¿Qué áreas tienen menor participación?…" onkeydown="handleKey(event)"></textarea>
+            <button class="chat-send-btn" onclick="sendMessage()">➤</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<script>
+
+const pageConfig = {
+  dashboard:  { title: 'Dashboard',              sub: 'Vista general del proceso de fusión' },
+  templates:  { title: 'Plantillas',             sub: 'Gestión de plantillas de comunicación' },
+  surveys:    { title: 'Encuestas',              sub: 'Diagnóstico y monitoreo de pulso' },
+  workshops:  { title: 'Talleres',               sub: 'Programación y gestión de workshops' },
+  metrics:    { title: 'Métricas y Reportes',    sub: 'KPIs del proceso de fusión' },
+  chatbot:    { title: 'Asistente IA',           sub: 'Análisis inteligente con gráficas' },
+  crisis:     { title: 'Centro de Crisis',       sub: 'Protocolos y contactos de emergencia' }
+};
+
+document.querySelectorAll('.nav-item').forEach(item => {
+  item.addEventListener('click', e => {
+    e.preventDefault();
+    const page = item.dataset.page;
+    navigate(page);
+  });
+});
+
+function navigate(page) {
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.toggle('active', n.dataset.page === page));
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + page).classList.add('active');
+  const cfg = pageConfig[page] || {};
+  document.getElementById('pageTitle').textContent = cfg.title || page;
+  document.getElementById('pageSubtitle').textContent = cfg.sub || '';
+  if (page === 'metrics') initMetricsCharts();
+}
+
+function toggleTask(el) {
+  el.classList.toggle('done');
+  el.querySelector('.task-check').textContent = el.classList.contains('done') ? '✓' : '';
+}
+
+Chart.defaults.color = '#4a5470';
+Chart.defaults.borderColor = '#232840';
+Chart.defaults.font.family = 'DM Sans';
+
+const COLORS = {
+  blue:   '#3b7fff',
+  green:  '#1de9b6',
+  amber:  '#ffb020',
+  red:    '#f43f5e',
+  purple: '#b197fc',
+  cyan:   '#22d3ee',
+};
+
+(function initDashCharts() {
+  new Chart(document.getElementById('dashSentimentChart'), {
+    type: 'doughnut',
+    data: {
+      labels: ['Positivo', 'Neutral', 'Negativo'],
+      datasets: [{ data: [62, 28, 10], backgroundColor: [COLORS.green, COLORS.amber, COLORS.red], borderWidth: 0, hoverOffset: 8 }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false, cutout: '74%',
+      plugins: {
+        legend: { position: 'right', labels: { font:{size:11}, padding:14, boxWidth:10 } },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${ctx.parsed}%` } }
+      }
+    }
+  });
+
+  new Chart(document.getElementById('dashEngagementChart'), {
+    type: 'bar',
+    data: {
+      labels: ['Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'],
+      datasets: [{
+        label: 'Alcance %',
+        data: [78, 85, 72, 91, 88, 65],
+        backgroundColor: ctx => {
+          const v = ctx.parsed.y;
+          return v >= 85 ? 'rgba(29,233,182,0.4)' : v >= 75 ? 'rgba(59,127,255,0.35)' : 'rgba(255,176,32,0.35)';
+        },
+        borderColor: ctx => {
+          const v = ctx.parsed.y;
+          return v >= 85 ? COLORS.green : v >= 75 ? COLORS.blue : COLORS.amber;
+        },
+        borderWidth: 2, borderRadius: 5,
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend:{display:false}, tooltip:{ callbacks:{ label: ctx=>`Alcance: ${ctx.parsed.y}%` } } },
+      scales: {
+        x: { grid:{display:false}, border:{display:false}, ticks:{font:{size:10}} },
+        y: { display:false }
+      }
+    }
+  });
+})();
+
+let metricsInited = false;
+function initMetricsCharts() {
+  if (metricsInited) return;
+  metricsInited = true;
+
+  new Chart(document.getElementById('metricsLineChart'), {
+    type: 'line',
+    data: {
+      labels: ['S1','S2','S3','S4','S5','S6','S7','S8'],
+      datasets: [
+        { label: 'Positivo', data: [38,42,47,50,55,58,60,62], borderColor: COLORS.green, backgroundColor: 'rgba(29,233,182,0.1)', fill:true, tension:0.4, pointRadius:4, pointBackgroundColor:COLORS.green },
+        { label: 'Neutral',  data: [40,38,35,33,31,30,29,28], borderColor: COLORS.amber, backgroundColor:'transparent', tension:0.4, pointRadius:3 },
+        { label: 'Negativo', data: [22,20,18,17,14,12,11,10], borderColor: COLORS.red,   backgroundColor:'transparent', tension:0.4, pointRadius:3, borderDash:[4,3] },
+      ]
+    },
+    options: {
+      responsive:true, maintainAspectRatio:true,
+      plugins:{ legend:{ position:'top', labels:{font:{size:11},padding:10,boxWidth:10} } },
+      scales:{ x:{grid:{color:'#232840'},border:{display:false}}, y:{grid:{color:'#232840'},border:{display:false},min:0,max:100} }
+    }
+  });
+
+  new Chart(document.getElementById('metricsRadarChart'), {
+    type: 'radar',
+    data: {
+      labels: ['Liderazgo','Colaboración','Innovación','Comunicación','Bienestar'],
+      datasets: [
+        { label:'Empresa A', data:[82,76,88,70,85], borderColor:COLORS.blue, backgroundColor:'rgba(59,127,255,0.15)', pointBackgroundColor:COLORS.blue, pointRadius:4 },
+        { label:'Empresa B', data:[74,85,72,80,78], borderColor:COLORS.purple, backgroundColor:'rgba(177,151,252,0.12)', pointBackgroundColor:COLORS.purple, pointRadius:4 },
+      ]
+    },
+    options: {
+      responsive:true, maintainAspectRatio:true,
+      plugins:{ legend:{ position:'top', labels:{font:{size:11},padding:10,boxWidth:10} } },
+      scales:{ r:{ grid:{color:'#232840'}, angleLines:{color:'#232840'}, ticks:{display:false}, pointLabels:{font:{size:11}}, min:0, max:100 } }
+    }
+  });
+}
+
+
+const chatCSS = document.createElement('style');
+chatCSS.textContent = `
+.insight-block { margin-top: 10px; display: flex; flex-direction: column; gap: 8px; }
+.insight-row {
+  display: flex; align-items: flex-start; gap: 8px;
+  padding: 8px 12px; border-radius: 8px; font-size: 13px; line-height: 1.5;
+}
+.insight-row.green { background: rgba(34,211,160,0.08); border-left: 3px solid #22d3a0; color: #94a3b8; }
+.insight-row.amber { background: rgba(245,158,11,0.08); border-left: 3px solid #f59e0b; color: #94a3b8; }
+.insight-row.red   { background: rgba(244,63,94,0.08);  border-left: 3px solid #f43f5e; color: #94a3b8; }
+.insight-row.blue  { background: rgba(59,127,255,0.08); border-left: 3px solid #3b7fff; color: #94a3b8; }
+.insight-row.purple{ background: rgba(167,139,250,0.08);border-left: 3px solid #a78bfa; color: #94a3b8; }
+.insight-ico { font-size: 15px; flex-shrink: 0; margin-top: 1px; }
+.action-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.action-chip {
+  font-size: 11.5px; padding: 4px 10px; border-radius: 6px; cursor: pointer;
+  background: var(--surface2); border: 1px solid var(--border2); color: var(--text2);
+  transition: all 0.15s; font-family: 'DM Sans', sans-serif;
+}
+.action-chip:hover { background: var(--accent-glow); border-color: var(--accent); color: var(--accent2); }
+.msg-chart-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin-top: 10px; }
+.msg-chart-title { font-size: 11px; font-weight: 600; color: var(--text3); letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 12px; }
+.msg-chart-wrap canvas { max-height: 220px; }
+.stat-pills { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+.stat-pill { background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; padding: 8px 14px; text-align: center; }
+.stat-pill-val { font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 700; display: block; }
+.stat-pill-val.g { color: #22d3a0; } .stat-pill-val.a { color: #f59e0b; } .stat-pill-val.b { color: #3b7fff; } .stat-pill-val.r { color: #f43f5e; }
+.stat-pill-lbl { font-size: 10px; color: var(--text3); }
+`;
+document.head.appendChild(chatCSS);
+
+const CHAT_RESPONSES = {
+
+  sentimiento_actual: {
+    question: '¿Cómo está el sentimiento actual de los empleados?',
+    chartType: 'doughnut',
+    chartTitle: 'Distribución de Sentimiento — Semana 4',
+    chartData: () => ({
+      labels: ['Positivo', 'Neutral', 'Negativo'],
+      datasets: [{ data: [62, 28, 10], backgroundColor: ['#22d3a0','#f59e0b','#f43f5e'], borderWidth: 0, hoverOffset: 8 }]
+    }),
+    chartOptions: { cutout: '70%', plugins: { legend: { position: 'right', labels: { font:{size:12}, padding: 14 } } } },
+    stats: [
+      { val: '62%', cls: 'g', lbl: 'Positivo' },
+      { val: '28%', cls: 'a', lbl: 'Neutral' },
+      { val: '10%', cls: 'r', lbl: 'Negativo' },
+    ],
+    insights: [
+      { type: 'green', ico: '✅', text: '<strong>62% de sentimiento positivo</strong> es un resultado sólido para la semana 4 de una fusión. El promedio del sector es ~45%, así que estamos significativamente por encima.' },
+      { type: 'amber', ico: '⚠️', text: '<strong>28% neutral</strong> representa una oportunidad. Este segmento está "en espera" de señales claras. Un comunicado de liderazgo visible puede moverlos hacia positivo.' },
+      { type: 'red',   ico: '🚨', text: '<strong>10% negativo</strong> está dentro del rango aceptable, pero requiere atención. Concentrado principalmente en Operaciones y Logística. Revisar FAQs y habilitar canal anónimo.' },
+      { type: 'blue',  ico: '📈', text: 'Esta semana el índice positivo creció <strong>+8 puntos</strong> respecto a la semana anterior. La tendencia es consistentemente al alza.' },
+    ],
+    actions: ['Ver evolución histórica', 'Analizar por departamento', 'Ver canales de comunicación']
+  },
+
+  evolucion_sentimiento: {
+    question: '¿Cuál es la evolución del sentimiento en las últimas 8 semanas?',
+    chartType: 'line',
+    chartTitle: 'Tendencia de Sentimiento — 8 Semanas',
+    chartData: () => ({
+      labels: ['Sem 1','Sem 2','Sem 3','Sem 4','Sem 5','Sem 6','Sem 7','Sem 8'],
+      datasets: [
+        { label: 'Positivo', data: [38,42,47,50,55,58,60,62], borderColor:'#22d3a0', backgroundColor:'rgba(34,211,160,0.12)', fill:true, tension:0.4, pointRadius:5, pointBackgroundColor:'#22d3a0' },
+        { label: 'Neutral',  data: [42,40,36,33,31,30,29,28], borderColor:'#f59e0b', backgroundColor:'transparent', tension:0.4, pointRadius:4, pointBackgroundColor:'#f59e0b' },
+        { label: 'Negativo', data: [20,18,17,17,14,12,11,10], borderColor:'#f43f5e', backgroundColor:'transparent', tension:0.4, pointRadius:4, pointBackgroundColor:'#f43f5e', borderDash:[4,3] },
+      ]
+    }),
+    chartOptions: { scales: { x:{ grid:{color:'#252b3b'}, border:{display:false} }, y:{ grid:{color:'#252b3b'}, border:{display:false}, min:0, max:80 } } },
+    stats: [
+      { val: '+24pt', cls: 'g', lbl: 'Crecimiento positivo' },
+      { val: '−10pt', cls: 'a', lbl: 'Reducción neutral' },
+      { val: '−10pt', cls: 'b', lbl: 'Reducción negativo' },
+    ],
+    insights: [
+      { type: 'green',  ico: '🚀', text: 'El sentimiento positivo ha crecido <strong>24 puntos porcentuales</strong> desde el inicio del proceso — de 38% a 62%. Esto indica que la estrategia de comunicación está funcionando.' },
+      { type: 'blue',   ico: '📉', text: 'El segmento neutral <strong>cayó de 42% a 28%</strong>. La mayoría se convirtió en positivo, lo que sugiere que los mensajes de liderazgo están resolviendo dudas efectivamente.' },
+      { type: 'amber',  ico: '⚡', text: 'En la <strong>semana 4</strong> hubo el mayor salto (+5 pts de positivo) coincidiendo con el lanzamiento del portal de FAQs. Fuerte correlación entre información y confianza.' },
+      { type: 'purple', ico: '🔮', text: 'A esta tasa de crecimiento, se proyecta alcanzar <strong>70-75% positivo</strong> para la semana 12 (Fase 3) si se mantiene la cadencia de comunicación actual.' },
+    ],
+    actions: ['Ver sentimiento por área', 'Revisar comunicados en semana 4', 'Ver próximas acciones recomendadas']
+  },
+
+  sentimiento_por_area: {
+    question: '¿Cómo está el sentimiento por departamento?',
+    chartType: 'bar',
+    chartTitle: 'Índice de Sentimiento Positivo por Departamento',
+    chartData: () => ({
+      labels: ['Finanzas','Tecnología','RRHH','Marketing','Legal','Ventas','Atención C.','Logística','Operaciones'],
+      datasets: [{
+        label: 'Sentimiento positivo %',
+        data: [78, 74, 71, 68, 65, 63, 57, 51, 46],
+        backgroundColor: [78,74,71,68,65,63,57,51,46].map(v => v>=65 ? 'rgba(34,211,160,0.35)' : v>=55 ? 'rgba(245,158,11,0.35)' : 'rgba(244,63,94,0.35)'),
+        borderColor:     [78,74,71,68,65,63,57,51,46].map(v => v>=65 ? '#22d3a0' : v>=55 ? '#f59e0b' : '#f43f5e'),
+        borderWidth: 2, borderRadius: 6,
+      }]
+    }),
+    chartOptions: {
+      indexAxis: 'y',
+      plugins: { legend:{display:false} },
+      scales: { x:{ grid:{color:'#252b3b'}, min:0, max:100 }, y:{ grid:{display:false} } }
+    },
+    stats: [
+      { val: '3', cls: 'g', lbl: 'Áreas en verde' },
+      { val: '3', cls: 'a', lbl: 'Áreas en ámbar' },
+      { val: '3', cls: 'r', lbl: 'Áreas en riesgo' },
+    ],
+    insights: [
+      { type: 'green',  ico: '🏆', text: '<strong>Finanzas, Tecnología y RRHH</strong> lideran con +70% de sentimiento positivo. Estos departamentos recibieron sesiones presenciales más extensas con sus gerentes.' },
+      { type: 'amber',  ico: '⚠️', text: '<strong>Marketing, Legal y Ventas</strong> están en zona media. El factor común es incertidumbre sobre estructuras de reporte. Priorizar comunicación sobre organigrama.' },
+      { type: 'red',    ico: '🚨', text: '<strong>Operaciones y Logística</strong> tienen el mayor riesgo. El principal miedo en estas áreas es sobre reubicaciones físicas y cambios de turno. Acción urgente recomendada.' },
+      { type: 'blue',   ico: '💡', text: 'Asignar <strong>embajadores del cambio</strong> en Operaciones, Logística y Atención al Cliente antes de la semana 6. El taller del 12-Feb debería priorizar estos grupos.' },
+    ],
+    actions: ['Ver acciones para áreas en riesgo', 'Ver sentimiento general', 'Revisar talleres programados']
+  },
+
+  alcance_comunicados: {
+    question: '¿Cuál es el alcance de los comunicados enviados?',
+    chartType: 'bar',
+    chartTitle: 'Alcance de Comunicados por Departamento (%)',
+    chartData: () => ({
+      labels: ['Finanzas','Tecnología','RRHH','Legal','Marketing','Ventas','Atención C.','Operaciones','Logística'],
+      datasets: [{
+        label: 'Alcance %', data: [94, 91, 89, 87, 85, 83, 80, 74, 70],
+        backgroundColor: 'rgba(59,127,255,0.25)', borderColor: '#3b7fff', borderWidth: 2, borderRadius: 6,
+      }, {
+        label: 'Meta (80%)', data: [80,80,80,80,80,80,80,80,80],
+        backgroundColor: 'transparent', borderColor: '#f43f5e', borderWidth: 1.5,
+        borderDash: [5,4], type: 'line', pointRadius: 0,
+      }]
+    }),
+    chartOptions: { scales: { x:{ grid:{display:false} }, y:{ grid:{color:'#252b3b'}, min:60, max:100 } } },
+    stats: [
+      { val: '24', cls: 'b', lbl: 'Comunicados enviados' },
+      { val: '87%', cls: 'g', lbl: 'Alcance promedio' },
+      { val: '6/9', cls: 'g', lbl: 'Áreas sobre meta' },
+    ],
+    insights: [
+      { type: 'green',  ico: '✅', text: '<strong>87% de alcance promedio</strong> supera la meta del 80%. En contextos de fusión, valores por encima del 75% se consideran excelentes dado el alto nivel de incertidumbre.' },
+      { type: 'amber',  ico: '⚠️', text: '<strong>Operaciones y Logística</strong> están por debajo de la meta de 80%. Estos equipos tienen menor acceso a correo corporativo durante turnos. Se recomienda comunicación vía supervisores directos y carteleras físicas.' },
+      { type: 'blue',   ico: '📱', text: 'El <strong>canal con mayor apertura</strong> es WhatsApp corporativo (92% de apertura) vs email (78%). Migrar los mensajes críticos a mensajería directa para los equipos de campo.' },
+      { type: 'purple', ico: '📊', text: 'Se enviaron <strong>24 comunicados en 4 semanas</strong> (6/semana). Este ritmo es adecuado — por encima de 8/semana puede generar fatiga de comunicación.' },
+    ],
+    actions: ['Ver canales de comunicación', 'Ver frecuencia mensual', 'Revisar plantillas disponibles']
+  },
+
+  canales_comunicacion: {
+    question: '¿Qué canales de comunicación se están usando?',
+    chartType: 'polarArea',
+    chartTitle: 'Uso de Canales de Comunicación',
+    chartData: () => ({
+      labels: ['Email corporativo','WhatsApp/Teams','Reuniones presenciales','Portal intranet','Carteleras físicas','Video llamadas'],
+      datasets: [{
+        data: [38, 27, 18, 9, 5, 3],
+        backgroundColor: ['rgba(59,127,255,0.6)','rgba(34,211,160,0.6)','rgba(167,139,250,0.6)','rgba(245,158,11,0.6)','rgba(244,63,94,0.5)','rgba(34,211,238,0.5)'],
+        borderWidth: 0,
+      }]
+    }),
+    chartOptions: { plugins: { legend: { position: 'right', labels: { font:{size:11}, padding:10, boxWidth:12 } } }, scales: { r: { ticks:{display:false}, grid:{color:'#252b3b'} } } },
+    stats: [
+      { val: '6', cls: 'b', lbl: 'Canales activos' },
+      { val: '38%', cls: 'b', lbl: 'Email (principal)' },
+      { val: '27%', cls: 'g', lbl: 'Mensajería instant.' },
+    ],
+    insights: [
+      { type: 'blue',   ico: '📧', text: 'El <strong>email corporativo</strong> sigue siendo el canal dominante (38%), pero su tasa de apertura ha bajado 6% en la última semana. Normal en procesos de fusión por volumen de mensajes.' },
+      { type: 'green',  ico: '💬', text: '<strong>WhatsApp/Teams</strong> es el canal de mayor crecimiento (+12% en uso). Los empleados lo prefieren para consultas rápidas y confirmaciones. Alta oportunidad de explotación.' },
+      { type: 'amber',  ico: '📋', text: 'El <strong>portal intranet</strong> solo representa el 9% del consumo, pero concentra el 60% de las consultas de FAQs. Necesita más visibilidad — añadirlo como link directo en todos los emails.' },
+      { type: 'purple', ico: '🎯', text: 'Recomendación: adoptar <strong>estrategia multicanal escalonada</strong> — anuncio vía email, recordatorio vía Teams/WhatsApp, consultas en intranet. Eleva el alcance efectivo 15-20%.' },
+    ],
+    actions: ['Ver alcance por departamento', 'Ver frecuencia de comunicados', 'Ver plantillas de comunicación']
+  },
+
+  frecuencia_comunicados: {
+    question: '¿Cuál ha sido la frecuencia de comunicados por semana?',
+    chartType: 'line',
+    chartTitle: 'Comunicados Enviados por Semana',
+    chartData: () => ({
+      labels: ['Sem 1','Sem 2','Sem 3','Sem 4','Sem 5','Sem 6 (proy.)','Sem 7 (proy.)'],
+      datasets: [
+        { label: 'Comunicados enviados', data: [3,5,6,7,6,null,null], borderColor:'#3b7fff', backgroundColor:'rgba(59,127,255,0.15)', fill:true, tension:0.4, pointRadius:5, pointBackgroundColor:'#3b7fff' },
+        { label: 'Proyección', data: [null,null,null,null,6,7,8], borderColor:'#a78bfa', backgroundColor:'rgba(167,139,250,0.08)', fill:true, tension:0.4, pointRadius:4, borderDash:[5,3] },
+        { label: 'Límite recomendado', data: [8,8,8,8,8,8,8], borderColor:'#f43f5e', backgroundColor:'transparent', pointRadius:0, borderDash:[4,3] },
+      ]
+    }),
+    chartOptions: { scales: { x:{ grid:{color:'#252b3b'}, border:{display:false} }, y:{ grid:{color:'#252b3b'}, border:{display:false}, min:0, max:12 } } },
+    stats: [
+      { val: '27', cls: 'b', lbl: 'Total acumulado' },
+      { val: '5.4', cls: 'g', lbl: 'Promedio/semana' },
+      { val: '7', cls: 'a', lbl: 'Pico (sem 4)' },
+    ],
+    insights: [
+      { type: 'green',  ico: '✅', text: 'La frecuencia promedio de <strong>5.4 comunicados/semana</strong> está dentro del rango óptimo (4–8). Por encima de 8/semana se genera "fatiga informativa" que reduce la tasa de lectura.' },
+      { type: 'blue',   ico: '📈', text: 'La <strong>semana 4</strong> (anuncio oficial) tuvo el pico más alto con 7 comunicados. Es normal en hitos importantes. La clave fue que todos tuvieron un mensaje diferente y complementario.' },
+      { type: 'amber',  ico: '⚡', text: 'Para las semanas 6–8 se proyecta un aumento ligero por las sesiones departamentales. Asegurarse de que cada comunicado tenga un <strong>call-to-action claro</strong> para evitar confusión.' },
+      { type: 'purple', ico: '📅', text: 'Días de mayor apertura según el historial: <strong>martes y jueves por la mañana</strong>. Programar los comunicados críticos en esas ventanas para maximizar alcance.' },
+    ],
+    actions: ['Ver alcance por canal', 'Ver plantillas disponibles', 'Ver sentimiento actual']
+  },
+
+  asistencia_talleres: {
+    question: '¿Cuál es la asistencia a los talleres vs las metas?',
+    chartType: 'bar',
+    chartTitle: 'Asistencia a Talleres — Real vs Objetivo',
+    chartData: () => ({
+      labels: ['Com. Empática G1 (Ene 28)','Com. Empática G2 (Feb 5)','Embajadores del Cambio (Feb 12)'],
+      datasets: [
+        { label: 'Asistentes reales', data: [16, 18, 0], backgroundColor: 'rgba(59,127,255,0.45)', borderColor: '#3b7fff', borderWidth: 2, borderRadius: 6 },
+        { label: 'Objetivo',          data: [20, 20, 25], backgroundColor: 'rgba(167,139,250,0.3)', borderColor: '#a78bfa', borderWidth: 2, borderRadius: 6 },
+        { label: 'Confirmados',       data: [16, 18, 24], backgroundColor: 'rgba(34,211,160,0.25)', borderColor: '#22d3a0', borderWidth: 1.5, borderDash:[4,3], borderRadius: 6 },
+      ]
+    }),
+    chartOptions: { scales: { x:{ grid:{display:false} }, y:{ grid:{color:'#252b3b'}, min:0, max:30 } } },
+    stats: [
+      { val: '34', cls: 'b', lbl: 'Asistentes total' },
+      { val: '80%', cls: 'a', lbl: 'Tasa cumplimiento' },
+      { val: '4.8', cls: 'g', lbl: 'Satisfacción G1' },
+    ],
+    insights: [
+      { type: 'amber',  ico: '📌', text: 'El taller del <strong>28 de enero</strong> tuvo 16/20 asistentes (80%). La ausencia de 4 personas se debió a conflicto con reuniones de clientes no previstas. Mejorar la coordinación con calendarios de áreas.' },
+      { type: 'green',  ico: '⭐', text: 'La satisfacción del Grupo 1 fue <strong>4.8/5</strong>, excepcionalmente alta. Los participantes destacaron la dinámica de role-play y el manejo del facilitador. Replicar formato en G2.' },
+      { type: 'blue',   ico: '📅', text: 'El taller de <strong>Embajadores del Cambio (Feb 12)</strong> tiene 24/25 confirmados — el más alto de todos. Es el más estratégico: estos participantes serán multiplicadores en sus equipos.' },
+      { type: 'purple', ico: '💡', text: 'Recomendación: grabar los talleres y publicarlos en intranet para los que no puedan asistir. Esto puede elevar el impacto de cada taller en un <strong>40-60% adicional</strong> de alcance.' },
+    ],
+    actions: ['Ver satisfacción de talleres', 'Ver sentimiento por área', 'Programar nuevo taller']
+  },
+
+  satisfaccion_talleres: {
+    question: '¿Cuál es la satisfacción en cada taller?',
+    chartType: 'bubble',
+    chartTitle: 'Satisfacción vs Asistencia (tamaño = impacto percibido)',
+    chartData: () => ({
+      datasets: [
+        { label: 'Com. Empática G1', data: [{ x: 16, y: 4.8, r: 20 }], backgroundColor: 'rgba(34,211,160,0.5)', borderColor: '#22d3a0' },
+        { label: 'Com. Empática G2', data: [{ x: 18, y: 4.6, r: 18 }], backgroundColor: 'rgba(59,127,255,0.5)', borderColor: '#3b7fff' },
+        { label: 'Embajadores (proyec.)', data: [{ x: 24, y: 4.7, r: 28 }], backgroundColor: 'rgba(167,139,250,0.4)', borderColor: '#a78bfa', borderDash:[4,3] },
+        { label: 'Meta mínima', data: [{ x: 20, y: 4.0, r: 8 }], backgroundColor: 'rgba(244,63,94,0.25)', borderColor: '#f43f5e' },
+      ]
+    }),
+    chartOptions: {
+      plugins: { legend: { position: 'right', labels:{font:{size:11},padding:10,boxWidth:12} } },
+      scales: {
+        x: { title:{display:true,text:'Asistentes',color:'#5a6882'}, grid:{color:'#252b3b'}, min:10, max:30 },
+        y: { title:{display:true,text:'Satisfacción /5',color:'#5a6882'}, grid:{color:'#252b3b'}, min:3.5, max:5 }
+      }
+    },
+    stats: [
+      { val: '4.7', cls: 'g', lbl: 'Promedio satisfac.' },
+      { val: '100%', cls: 'g', lbl: 'Sobre meta (4.0)' },
+      { val: '58', cls: 'b', lbl: 'Impactados total' },
+    ],
+    insights: [
+      { type: 'green',  ico: '🥇', text: 'Todos los talleres completados superan la <strong>meta mínima de 4.0/5</strong>. El promedio de 4.7 es excepcional y refleja alta calidad del facilitador y contenido relevante.' },
+      { type: 'blue',   ico: '📐', text: 'La correlación entre <strong>mayor asistencia y satisfacción</strong> se mantiene positiva. Grupos más grandes generan mejores dinámicas de discusión en este tipo de workshops de cambio.' },
+      { type: 'amber',  ico: '💬', text: 'El feedback cualitativo más repetido: <strong>"necesitamos más tiempo"</strong> (mencionado por 11 participantes). Considerar extender el taller de Embajadores de 1 a 1.5 días.' },
+      { type: 'purple', ico: '🎯', text: 'Los participantes con mayor impacto posterior son aquellos en roles de <strong>supervisión media</strong>. Asegurar su presencia en el taller del 12-Feb es prioritario.' },
+    ],
+    actions: ['Ver asistencia vs metas', 'Ver sentimiento por área', 'Programar más talleres']
+  },
+
+  kpi_general: {
+    question: '¿Cuál es el estado de todos los KPIs del proceso?',
+    chartType: 'bar',
+    chartTitle: 'KPIs Actuales vs Metas Establecidas',
+    chartData: () => ({
+      labels: ['Conocimiento\ncambios','Satisfacción\ncomun.','Retención\ntalento','Participación\nsesiones','Reducción\nrumores','eNPS\n(normalizado)'],
+      datasets: [
+        { label: 'Actual', data: [84,72,94,78,65,62], backgroundColor: [84,72,94,78,65,62].map((_,i) => ['rgba(34,211,160,0.45)','rgba(245,158,11,0.45)','rgba(34,211,160,0.45)','rgba(34,211,160,0.45)','rgba(59,127,255,0.45)','rgba(59,127,255,0.45)'][i]), borderColor: ['#22d3a0','#f59e0b','#22d3a0','#22d3a0','#3b7fff','#3b7fff'], borderWidth:2, borderRadius:6 },
+        { label: 'Meta',   data: [80,70,90,75,60,60], backgroundColor:'transparent', borderColor:'rgba(255,255,255,0.2)', borderWidth:1.5, borderDash:[5,4], borderRadius:6 },
+      ]
+    }),
+    chartOptions: { scales: { x:{ grid:{display:false}, ticks:{font:{size:10}} }, y:{ grid:{color:'#252b3b'}, min:50, max:100 } } },
+    stats: [
+      { val: '6/6', cls: 'g', lbl: 'Metas cumplidas' },
+      { val: '+8%', cls: 'g', lbl: 'Sobre meta prom.' },
+      { val: 'A+', cls: 'b', lbl: 'Estado general' },
+    ],
+    insights: [
+      { type: 'green',  ico: '🏆', text: '<strong>Los 6 KPIs superan sus metas</strong>. Esto es poco común en la semana 4 de un proceso de fusión. El nivel de preparación y la calidad de la comunicación son factores clave.' },
+      { type: 'green',  ico: '💎', text: 'La <strong>retención de talento clave en 94%</strong> es el indicador más crítico y más robusto. El riesgo de "flight risk" en las primeras 90 días de una fusión suele ser del 20-30%.' },
+      { type: 'amber',  ico: '📌', text: '<strong>Satisfacción con la comunicación (72%)</strong> es el indicador más cercano a su meta (70%). Aunque cumple, hay margen de mejora. El feedback indica que los mensajes son "correctos pero fríos". Humanizar el tono.' },
+      { type: 'purple', ico: '🔮', text: 'Al ritmo actual, se proyecta cerrar la Fase 2 con todos los indicadores en <strong>+10% sobre meta</strong>. El riesgo principal es el período de integración de sistemas (semanas 8–10).' },
+    ],
+    actions: ['Ver evolución de sentimiento', 'Ver retención de talento', 'Ver diagnóstico cultural']
+  },
+
+  diagnostico_cultural: {
+    question: '¿Cuáles son los resultados del diagnóstico cultural?',
+    chartType: 'radar',
+    chartTitle: 'Diagnóstico Cultural — Empresa A vs Empresa B',
+    chartData: () => ({
+      labels: ['Liderazgo','Colaboración','Innovación','Comunicación','Bienestar','Orientación\nal cliente'],
+      datasets: [
+        { label: 'Empresa A', data: [82,76,88,70,85,79], borderColor:'#3b7fff', backgroundColor:'rgba(59,127,255,0.2)', pointBackgroundColor:'#3b7fff', pointRadius:5 },
+        { label: 'Empresa B', data: [74,87,71,83,78,85], borderColor:'#a78bfa', backgroundColor:'rgba(167,139,250,0.15)', pointBackgroundColor:'#a78bfa', pointRadius:5 },
+      ]
+    }),
+    chartOptions: { scales: { r: { grid:{color:'#252b3b'}, angleLines:{color:'#252b3b'}, ticks:{display:false}, pointLabels:{font:{size:11}}, min:50, max:100 } } },
+    stats: [
+      { val: '2', cls: 'g', lbl: 'Fortalezas coinciden' },
+      { val: '3', cls: 'a', lbl: 'Brechas críticas' },
+      { val: '68%', cls: 'b', lbl: 'Compatibilidad cultural' },
+    ],
+    insights: [
+      { type: 'green',  ico: '🤝', text: '<strong>Bienestar y Liderazgo</strong> son las dimensiones más alineadas entre ambas empresas. Esto facilita la integración de políticas de RRHH y el estilo directivo. Punto de partida natural.' },
+      { type: 'red',    ico: '⚡', text: 'La brecha más grande está en <strong>Innovación (88 vs 71)</strong>. Empresa A tiene una cultura de experimentación rápida que puede generar conflicto con el enfoque más estructurado de Empresa B.' },
+      { type: 'amber',  ico: '💬', text: '<strong>Comunicación (70 vs 83)</strong> es otra brecha significativa. Empresa B tiene canales más formales y jerárquicos. Empresa A es más horizontal. El modelo híbrido propuesto requiere gestión activa.' },
+      { type: 'blue',   ico: '🗺️', text: 'Con un <strong>68% de compatibilidad cultural</strong>, estamos en zona "fusión viable con gestión activa". Por encima del 60% se considera manejable. El taller de Embajadores es clave para cerrar brechas.' },
+    ],
+    actions: ['Ver sentimiento por departamento', 'Ver talleres programados', 'Ver métricas KPI']
+  },
+
+  participacion_encuestas: {
+    question: '¿Cuál es la tasa de participación en encuestas por área?',
+    chartType: 'bar',
+    chartTitle: 'Tasa de Participación en Encuestas por Departamento (%)',
+    chartData: () => ({
+      labels: ['Finanzas','RRHH','Tecnología','Legal','Marketing','Ventas','Atención C.','Logística','Operaciones'],
+      datasets: [{
+        label: 'Participación %',
+        data: [95, 92, 90, 86, 82, 79, 71, 65, 58],
+        backgroundColor: [95,92,90,86,82,79,71,65,58].map(v => v>=80?'rgba(34,211,160,0.35)':v>=70?'rgba(245,158,11,0.35)':'rgba(244,63,94,0.35)'),
+        borderColor:     [95,92,90,86,82,79,71,65,58].map(v => v>=80?'#22d3a0':v>=70?'#f59e0b':'#f43f5e'),
+        borderWidth: 2, borderRadius: 6,
+      }]
+    }),
+    chartOptions: {
+      indexAxis: 'y',
+      plugins: { legend:{display:false} },
+      scales: { x:{ grid:{color:'#252b3b'}, min:40, max:100 }, y:{ grid:{display:false} } }
+    },
+    stats: [
+      { val: '78%', cls: 'g', lbl: 'Participación global' },
+      { val: '6/9', cls: 'g', lbl: 'Sobre umbral 75%' },
+      { val: '3', cls: 'r', lbl: 'Áreas críticas' },
+    ],
+    insights: [
+      { type: 'green',  ico: '📊', text: '<strong>78% de participación global</strong> es excelente. La referencia del sector para encuestas de fusión es 50-60%. Nuestro resultado refleja confianza en el proceso y en la confidencialidad.' },
+      { type: 'red',    ico: '🚨', text: '<strong>Operaciones (58%) y Logística (65%)</strong> están por debajo del umbral mínimo del 75%. El factor principal: acceso limitado a dispositivos durante turnos y desconfianza en la confidencialidad.' },
+      { type: 'amber',  ico: '💡', text: 'Para Atención al Cliente (71%), Logística y Operaciones: implementar <strong>encuestas en papel + QR</strong> disponibles en sala de descanso. Esto elevó la participación 15% en empresas similares.' },
+      { type: 'blue',   ico: '🔒', text: 'Reforzar el mensaje de <strong>anonimato garantizado</strong> en estas 3 áreas. Un comunicado específico del Gerente de RRHH dirigido a estos equipos puede ser el diferenciador.' },
+    ],
+    actions: ['Ver sentimiento por área', 'Ver alcance de comunicados', 'Ver diagnóstico cultural']
+  },
+
+  retencion_talento: {
+    question: '¿Cuál es el estado de retención del talento clave?',
+    chartType: 'doughnut',
+    chartTitle: 'Estado de Retención — Talento Crítico (47 personas)',
+    chartData: () => ({
+      labels: ['Retenidos confirmados','En riesgo medio','En riesgo alto','Salidas confirmadas'],
+      datasets: [{
+        data: [40, 4, 2, 1],
+        backgroundColor: ['rgba(34,211,160,0.7)','rgba(245,158,11,0.7)','rgba(244,63,94,0.6)','rgba(244,63,94,0.9)'],
+        borderWidth: 0, hoverOffset: 8,
+      }]
+    }),
+    chartOptions: { cutout: '65%', plugins: { legend: { position: 'right', labels:{ font:{size:11}, padding:12, boxWidth:12 } } } },
+    stats: [
+      { val: '94%', cls: 'g', lbl: 'Retención actual' },
+      { val: '6', cls: 'a', lbl: 'Perfiles en monitoreo' },
+      { val: '1', cls: 'r', lbl: 'Salida confirmada' },
+    ],
+    insights: [
+      { type: 'green',  ico: '💎', text: '<strong>94% de retención en talento crítico</strong> supera ampliamente la meta del 90%. En fusiones no gestionadas, la tasa de abandono en los primeros 6 meses puede alcanzar el 30%. Esto es un logro considerable.' },
+      { type: 'amber',  ico: '👁️', text: '<strong>6 perfiles están en monitoreo activo</strong>: 4 en riesgo medio (recibieron ofertas externas pero no las han aceptado) y 2 en riesgo alto (señales de desenganche en encuestas y baja participación).' },
+      { type: 'red',    ico: '🚨', text: '<strong>1 salida confirmada</strong> — Gerente de Producto Senior. Ya se identificó el sucesor interno. El impacto en el proyecto es manejable. Lección: los gerentes de producto son el perfil más vulnerable en fusiones tecnológicas.' },
+      { type: 'blue',   ico: '🎯', text: 'Para los 2 perfiles de riesgo alto: programar <strong>conversaciones 1:1 con el CEO o Director de área</strong> antes del 10-Feb. El reconocimiento directo del liderazgo tiene el mayor impacto en retención.' },
+    ],
+    actions: ['Ver diagnóstico cultural', 'Ver KPIs generales', 'Ver satisfacción de talleres']
+  },
+
+  default: {
+    question: 'Consulta general',
+    chartType: 'bar',
+    chartTitle: 'Resumen de KPIs del Proceso de Fusión',
+    chartData: () => ({
+      labels: ['Conocimiento','Satisfacción','Retención','Participación'],
+      datasets: [
+        { label: 'Actual', data: [84,72,94,78], backgroundColor: ['rgba(34,211,160,0.45)','rgba(245,158,11,0.45)','rgba(34,211,160,0.45)','rgba(59,127,255,0.45)'], borderColor: ['#22d3a0','#f59e0b','#22d3a0','#3b7fff'], borderWidth:2, borderRadius:6 },
+        { label: 'Meta',   data: [80,70,90,75], backgroundColor:'transparent', borderColor:'rgba(255,255,255,0.15)', borderWidth:1.5, borderDash:[5,4], borderRadius:6 },
+      ]
+    }),
+    chartOptions: { scales: { x:{ grid:{display:false} }, y:{ grid:{color:'#252b3b'}, min:60, max:100 } } },
+    stats: [
+      { val: '87%', cls: 'g', lbl: 'Alcance global' },
+      { val: 'Fase 2', cls: 'b', lbl: 'Estado fusión' },
+      { val: '6/6', cls: 'g', lbl: 'Metas cumplidas' },
+    ],
+    insights: [
+      { type: 'green', ico: '✅', text: 'El proceso de fusión está en <strong>estado verde general</strong>. Todos los indicadores principales superan sus metas en la semana 4.' },
+      { type: 'blue',  ico: '💡', text: 'Puedes preguntar sobre cualquier área específica: sentimiento, comunicados, talleres, retención, diagnóstico cultural o participación en encuestas.' },
+    ],
+    actions: ['Ver sentimiento actual', 'Ver KPIs generales', 'Ver diagnóstico cultural']
+  }
+};
+
+function detectIntent(msg) {
+  const m = msg.toLowerCase().trim();
+  if (CHAT_RESPONSES[m]) return m;
+  if (m.includes('actual') && m.includes('sentimiento')) return 'sentimiento_actual';
+  if (m.includes('evoluci') || (m.includes('semana') && m.includes('sentimiento'))) return 'evolucion_sentimiento';
+  if (m.includes('departamento') || m.includes('área') || (m.includes('sentimiento') && m.includes('area'))) return 'sentimiento_por_area';
+  if (m.includes('canal')) return 'canales_comunicacion';
+  if (m.includes('frecuencia') || m.includes('mensual')) return 'frecuencia_comunicados';
+  if ((m.includes('comunicado') || m.includes('alcance')) && !m.includes('canal')) return 'alcance_comunicados';
+  if (m.includes('asistencia') || (m.includes('taller') && !m.includes('satisfacc'))) return 'asistencia_talleres';
+  if (m.includes('satisfacc') && m.includes('taller')) return 'satisfaccion_talleres';
+  if (m.includes('kpi') || m.includes('m\u00e9trica') || m.includes('indicador') || m.includes('resumen general')) return 'kpi_general';
+  if (m.includes('cultural') || m.includes('diagn\u00f3stico') || m.includes('brecha')) return 'diagnostico_cultural';
+  if (m.includes('participaci\u00f3n') || m.includes('encuesta')) return 'participacion_encuestas';
+  if (m.includes('retenci\u00f3n') || m.includes('talento') || m.includes('riesgo')) return 'retencion_talento';
+  if (m.includes('sentimiento')) return 'sentimiento_actual';
+  if (m.includes('taller')) return 'asistencia_talleres';
+  if (m.includes('comunicado') || m.includes('comunicaci\u00f3n')) return 'alcance_comunicados';
+  return 'default';
+}
+
+function handleKey(e) { if (e.key==='Enter' && !e.shiftKey){ e.preventDefault(); sendMessage(); } }
+
+function sendSuggestion(key) {
+  const r = CHAT_RESPONSES[key];
+  if (r) {
+    document.getElementById('chatInput').value = r.question;
+    sendMessage(key);
+  }
+}
+
+function sendMessage(forcedIntent) {
+  const input = document.getElementById('chatInput');
+  const text = input.value.trim();
+  if (!text) return;
+  input.value = '';
+  appendUserMsg(text);
+  showTyping();
+  const intent = forcedIntent || detectIntent(text);
+  setTimeout(() => {
+    removeTyping();
+    renderBotResponse(CHAT_RESPONSES[intent] || CHAT_RESPONSES.default);
+  }, 700 + Math.random() * 500);
+}
+
+function appendUserMsg(text) {
+  const msgs = document.getElementById('chatMessages');
+  const d = document.createElement('div');
+  d.className = 'msg user';
+  d.innerHTML = `<div class="msg-avatar">JP</div><div class="msg-bubble">${escHtml(text)}</div>`;
+  msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight;
+}
+
+function renderBotResponse(r) {
+  const msgs = document.getElementById('chatMessages');
+  const uid = 'c' + Date.now();
+  const d = document.createElement('div');
+  d.className = 'msg bot';
+
+  const statPills = r.stats ? `<div class="stat-pills">${r.stats.map(s=>`<div class="stat-pill"><span class="stat-pill-val ${s.cls}">${s.val}</span><span class="stat-pill-lbl">${s.lbl}</span></div>`).join('')}</div>` : '';
+
+  const insightsHTML = r.insights ? `<div class="insight-block">${r.insights.map(i=>`<div class="insight-row ${i.type}"><span class="insight-ico">${i.ico}</span><span>${i.text}</span></div>`).join('')}</div>` : '';
+
+  const chipsHTML = r.actions ? `<div class="action-chips">${r.actions.map(a=>`<span class="action-chip" onclick="sendSuggestion(findIntentByAction('${a}'))">${a}</span>`).join('')}</div>` : '';
+
+  d.innerHTML = `
+    <div class="msg-avatar">✦</div>
+    <div style="flex:1;min-width:0;">
+      ${statPills}
+      ${insightsHTML}
+      <div class="msg-chart-wrap">
+        <div class="msg-chart-title">${r.chartTitle}</div>
+        <canvas id="${uid}" style="max-height:220px;"></canvas>
+      </div>
+      ${chipsHTML}
+    </div>`;
+  msgs.appendChild(d);
+  msgs.scrollTop = msgs.scrollHeight;
+
+  const cfg = buildChartConfig(r.chartType, r.chartData(), r.chartOptions);
+  new Chart(document.getElementById(uid), cfg);
+}
+
+function buildChartConfig(type, data, opts = {}) {
+  const base = {
+    type,
+    data,
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { labels: { font:{size:11}, padding:10, boxWidth:12 } } },
+      ...opts
+    }
+  };
+  if (opts.plugins) base.options.plugins = Object.assign({}, base.options.plugins, opts.plugins);
+  if (opts.scales)  base.options.scales  = opts.scales;
+  return base;
+}
+
+function findIntentByAction(label) {
+  const map = {
+    'Ver evolución histórica': 'evolucion_sentimiento',
+    'Ver sentimiento actual': 'sentimiento_actual',
+    'Analizar por departamento': 'sentimiento_por_area',
+    'Ver sentimiento general': 'sentimiento_actual',
+    'Ver canales de comunicación': 'canales_comunicacion',
+    'Ver canales de comunicación': 'canales_comunicacion',
+    'Ver frecuencia mensual': 'frecuencia_comunicados',
+    'Ver alcance de comunicados': 'alcance_comunicados',
+    'Ver alcance por canal': 'canales_comunicacion',
+    'Ver alcance por departamento': 'alcance_comunicados',
+    'Ver frecuencia de comunicados': 'frecuencia_comunicados',
+    'Ver plantillas de comunicación': 'default',
+    'Ver plantillas disponibles': 'default',
+    'Revisar plantillas disponibles': 'default',
+    'Revisar comunicados en semana 4': 'alcance_comunicados',
+    'Ver próximas acciones recomendadas': 'kpi_general',
+    'Ver acciones para áreas en riesgo': 'participacion_encuestas',
+    'Revisar talleres programados': 'asistencia_talleres',
+    'Ver asistencia vs metas': 'asistencia_talleres',
+    'Ver satisfacción de talleres': 'satisfaccion_talleres',
+    'Programar nuevo taller': 'asistencia_talleres',
+    'Programar más talleres': 'asistencia_talleres',
+    'Ver sentimiento por área': 'sentimiento_por_area',
+    'Ver sentimiento por departamento': 'sentimiento_por_area',
+    'Ver KPIs generales': 'kpi_general',
+    'Ver KPIs vs metas': 'kpi_general',
+    'Ver retención de talento': 'retencion_talento',
+    'Ver diagnóstico cultural': 'diagnostico_cultural',
+    'Ver evolución de sentimiento': 'evolucion_sentimiento',
+    'Ver métricas KPI': 'kpi_general',
+    'Ver diagnóstico cultural': 'diagnostico_cultural',
+    'Ver participación encuestas': 'participacion_encuestas',
+    'Ver alcance de comunicados': 'alcance_comunicados',
+    'Ver satisfacción de talleres': 'satisfaccion_talleres',
+  };
+  return map[label] || 'default';
+}
+
+function showTyping() {
+  const msgs = document.getElementById('chatMessages');
+  const d = document.createElement('div'); d.className='msg bot'; d.id='typingIndicator';
+  d.innerHTML=`<div class="msg-avatar">✦</div><div class="msg-bubble"><div class="typing-dots"><span></span><span></span><span></span></div></div>`;
+  msgs.appendChild(d); msgs.scrollTop = msgs.scrollHeight;
+}
+function removeTyping() { const t=document.getElementById('typingIndicator'); if(t) t.remove(); }
+function escHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+</script>
+</body>
+</html>
